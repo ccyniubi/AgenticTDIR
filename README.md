@@ -1,7 +1,5 @@
 <p align="center">
   <img src="./AgenticTDIR_logo.png" alt="AgenticTDIR Logo" width="130">
-  &nbsp;&nbsp;&nbsp;
-  <img src="./AgenticTDIR_eight_image_slider_restoration.gif" alt="AgenticTDIR Restoration Demo" width="620">
 </p>
 
 <h1 align="center">AgenticTDIR: Task-Driven Image Restoration with Test-Time Generalization under Composite Degradations</h1>
