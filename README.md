@@ -29,8 +29,9 @@ https://github.com/user-attachments/assets/f85b5aea-00f9-4736-85b7-b5bdf9db5fce
 
 AgenticTDIR 的演示视频如下
 
+https://github.com/user-attachments/assets/f9472f84-62e4-43b2-a5e7-65f90bf5c6bb
 
-Uploading AgenticTDIR_Chinese_GitHub_under10MB.mp4…
+
 
 
 
