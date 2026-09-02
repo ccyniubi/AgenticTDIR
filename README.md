@@ -31,9 +31,7 @@ https://github.com/user-attachments/assets/fe226925-4e19-4a63-aa33-9139c26e6a56
 
 AgenticTDIR 的演示视频如下
 
-https://github.com/user-attachments/assets/f9472f84-62e4-43b2-a5e7-65f90bf5c6bb
-
-
+https://github.com/user-attachments/assets/626b4e75-116b-49ba-ad3a-c6fa9ca68290
 
 
 
