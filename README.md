@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="./AgenticTDIR_logo.png" alt="AgenticTDIR Logo" width="130">
+  <img src="./AgenticTDIR\_logo.png" alt="AgenticTDIR Logo" width="130">
 </p>
 
 <h1 align="center">AgenticTDIR: Task-Driven Image Restoration with Test-Time Generalization under Composite Degradations</h1>
@@ -9,7 +9,7 @@
     <img src="https://img.shields.io/badge/🤗%20Hugging%20Face-Interactive%20Demo-yellow" alt="Hugging Face Demo">
   </a>
   <img src="https://img.shields.io/badge/Status-Under%20Review-blue" alt="Status: Under Review">
-  <img src="https://visitor-badge.laobi.icu/badge?page_id=CHICHIYU.AgenticTDIR&left_text=Visitors" alt="Page Visitors">
+  <img src="https://visitor-badge.laobi.icu/badge?page\_id=CHICHIYU.AgenticTDIR\&left\_text=Visitors" alt="Page Visitors">
 </p>
 
 **AgenticTDIR** is an agentic framework for **Task-Driven Image Restoration (TDIR)** under unknown composite degradations.
@@ -19,18 +19,13 @@ Instead of using a fixed feed-forward restoration mapping, AgenticTDIR performs 
 The framework is evaluated on **image classification, object detection, and semantic segmentation**, targeting test-time generalization to unseen degradation compositions and unseen datasets.
 
 
-## ✨ Restoration Showcase
-
-<p align="center">
-  <img src="./AgenticTDIR_eight_image_slider_restoration.gif" alt="AgenticTDIR Restoration Showcase" width="100%">
-</p>
-
 
 ## 🎬 Demo Video
 
 A demonstration of the AgenticTDIR restoration process is available below.
 
 https://github.com/user-attachments/assets/f85b5aea-00f9-4736-85b7-b5bdf9db5fce
+
 
 
 ## 🚧 Code Release
@@ -43,4 +38,5 @@ The source code, pretrained models, and complete reproduction instructions will 
 
 Try AgenticTDIR directly through our Hugging Face Space:
 
-### **[▶ Launch AgenticTDIR Interactive Demo](https://huggingface.co/spaces/CHICHIYU/AgenticTDIR)**
+### [**▶ Launch AgenticTDIR Interactive Demo**](https://huggingface.co/spaces/CHICHIYU/AgenticTDIR)
+
