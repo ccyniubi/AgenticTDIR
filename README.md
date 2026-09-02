@@ -19,11 +19,20 @@ Instead of using a fixed feed-forward restoration mapping, AgenticTDIR performs 
 The framework is evaluated on **image classification, object detection, and semantic segmentation**, targeting test-time generalization to unseen degradation compositions and unseen datasets.
 
 
-## 🎬 Demo Video
+## 🎬 Demo Video (English)
 
 A demonstration of the AgenticTDIR restoration process is available below.
 
 https://github.com/user-attachments/assets/f85b5aea-00f9-4736-85b7-b5bdf9db5fce
+
+## 🎬 Demo Video (Chinese)
+
+AgenticTDIR 的演示视频如下
+
+
+Uploading AgenticTDIR_Chinese_GitHub_under10MB.mp4…
+
+
 
 
 ## 🤗 Interactive Demo
