@@ -23,7 +23,9 @@ The framework is evaluated on **image classification, object detection, and sema
 
 A demonstration of the AgenticTDIR restoration process is available below.
 
-https://github.com/user-attachments/assets/f85b5aea-00f9-4736-85b7-b5bdf9db5fce
+https://github.com/user-attachments/assets/fe226925-4e19-4a63-aa33-9139c26e6a56
+
+
 
 ## 🎬 Demo Video (Chinese)
 
