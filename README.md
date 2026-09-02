@@ -1,3 +1,5 @@
+
+
 # AgenticTDIR: Task-Driven Image Restoration with Test-Time Generalization under Composite Degradations
 
 <p align="center">
@@ -18,13 +20,9 @@ The framework is evaluated on **image classification, object detection, and sema
 
 A demonstration of the AgenticTDIR restoration process is available below.
 
-<p align="center">
-  <a href="./AgenticTDIR_English_1080p_60fps_v19.mp4">
-    ▶ <strong>Watch the AgenticTDIR Demo Video (1080p / 60 FPS)</strong>
-  </a>
-</p>
+https://github.com/user-attachments/assets/f85b5aea-00f9-4736-85b7-b5bdf9db5fce
 
-> **Video:** `AgenticTDIR_English_1080p_60fps_v19.mp4`
+
 
 ## 🚧 Code Release
 
