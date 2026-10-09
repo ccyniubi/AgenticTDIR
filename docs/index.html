@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080c14">
+  <meta name="description" content="AgenticTDIR restores images for classification, detection, and segmentation through task-aware sequential decisions under unknown composite degradations.">
+  <title>AgenticTDIR · Task-Driven Image Restoration</title>
+  <link rel="icon" href="assets/logo.webp" type="image/webp">
+  <link rel="stylesheet" href="styles.css">
+  <script defer src="assets/data.js"></script>
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="topbar">
+    <nav class="nav container" aria-label="Main navigation">
+      <a class="brand" href="#top"><img src="assets/logo.webp" alt="" width="36" height="36">Agentic<span>TDIR</span></a>
+      <button class="menu-button" aria-label="Open navigation" aria-expanded="false" aria-controls="nav-links">Menu</button>
+      <div class="nav-links" id="nav-links">
+        <a href="#examples">Examples</a><a href="#overview">Overview</a><a href="#method">Method</a><a href="#results">Experiments</a><a href="#video">Video</a>
+      </div>
+      <a class="nav-demo" href="https://huggingface.co/spaces/CHICHIYU/AgenticTDIR" target="_blank" rel="noopener noreferrer">Interactive demo</a>
+    </nav>
+  </header>
+  <main id="main">
+    <section class="hero" id="top" aria-labelledby="paper-title">
+      <div class="container hero-content">
+        <div class="eyebrow"><span class="mini-line"></span> TASK-DRIVEN IMAGE RESTORATION</div>
+        <div class="project-name"><img src="assets/logo.webp" alt="AgenticTDIR logo" width="72" height="72"><span>Agentic<span class="gradient-text">TDIR</span></span></div>
+        <h1 id="paper-title">Task-Driven Image Restoration with Test-Time Generalization<br class="desktop-break"> under Composite Degradations</h1>
+        <div class="authors">
+          <div class="author-row"><span>Chiyu Chen<sup>1</sup></span><span>Zhengjue Wang<sup>1</sup></span><span>Hao Zhang<sup>1,†</sup></span><span>Xueliang Zou<sup>1</sup></span><span>Jianqiao Sun<sup>1</sup></span></div><div class="author-row"><span>Jiawei Ma<sup>2</sup></span><span>Bo Chen<sup>1</sup></span><span>Hongwei Liu<sup>1</sup></span><span>Liangliang Cao<sup>3</sup></span></div>
+        </div>
+        <div class="affiliations"><span><sup>1</sup> Xidian University</span><span><sup>2</sup> City University of Hong Kong</span><span><sup>3</sup> The Hong Kong Polytechnic University</span></div>
+        <p class="corresponding">† Corresponding author</p>
+        <p class="hero-lead">Restore for the task. <strong>Verify every decision.</strong><br>Adaptive image restoration that recovers the evidence a frozen vision model needs.</p>
+        <div class="button-row">
+          <a class="button primary" href="https://huggingface.co/spaces/CHICHIYU/AgenticTDIR" target="_blank" rel="noopener noreferrer"><span aria-hidden="true">◈</span> Try interactive demo</a>
+          <a class="button" href="https://github.com/ccyniubi/AgenticTDIR" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 .8a11.2 11.2 0 0 0-3.54 21.83c.56.1.77-.24.77-.54v-2.08c-3.13.68-3.79-1.33-3.79-1.33-.51-1.3-1.25-1.65-1.25-1.65-1.02-.7.08-.69.08-.69 1.13.08 1.72 1.16 1.72 1.16 1 1.71 2.63 1.22 3.27.93.1-.72.39-1.22.72-1.5-2.5-.29-5.13-1.25-5.13-5.57 0-1.23.44-2.24 1.16-3.03-.12-.29-.51-1.43.11-2.98 0 0 .95-.3 3.08 1.16A10.7 10.7 0 0 1 12 6.13c.96 0 1.91.13 2.8.38 2.14-1.46 3.08-1.16 3.08-1.16.62 1.55.23 2.69.11 2.98.73.79 1.16 1.8 1.16 3.03 0 4.33-2.63 5.28-5.14 5.56.4.35.76 1.03.76 2.08v3.09c0 .3.2.65.78.54A11.2 11.2 0 0 0 12 .8Z"/></svg> GitHub</a>
+          <a class="button" href="#video"><span class="play-small" aria-hidden="true">▶</span> Watch video</a>
+        </div>
+        <div class="stat-strip" aria-label="Research at a glance">
+          <div><strong>3</strong><span>Downstream tasks</span></div><div><strong>8</strong><span>Evaluation benchmarks</span></div><div><strong>4</strong><span>Unseen compositions</span></div><div><strong>11<span>M</span></strong><span>Policy parameters</span></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section examples-section" id="examples" aria-labelledby="examples-title">
+      <div class="container">
+        <div class="section-heading"><div><p class="eyebrow">01 / SEE THE DIFFERENCE</p><h2 id="examples-title">Recover the evidence.</h2></div><p>Explore restoration across three vision tasks.<br>Drag the divider to compare input and output.</p></div>
+        <div class="showcase">
+          <div class="showcase-toolbar">
+            <div class="segmented" role="tablist" aria-label="Example task">
+              <button role="tab" id="task-classification" aria-selected="true" aria-controls="example-panel" data-task="classification">Classification</button>
+              <button role="tab" id="task-detection" aria-selected="false" aria-controls="example-panel" tabindex="-1" data-task="detection">Detection</button>
+              <button role="tab" id="task-segmentation" aria-selected="false" aria-controls="example-panel" tabindex="-1" data-task="segmentation">Segmentation</button>
+            </div>
+            <div class="view-switch" aria-label="Image view" hidden><button data-view="image" aria-pressed="false">Image</button><button data-view="prediction" aria-pressed="true">Task prediction</button></div>
+          </div>
+          <div class="showcase-grid" id="example-panel" role="tabpanel" aria-labelledby="task-classification">
+            <div class="comparison-area">
+              <div class="comparison" style="--split:50%">
+                <img class="comparison-after" id="comparison-after" src="assets/cases/classification-1/after.webp" alt="Abyssinian cat after restoration by AgenticTDIR" width="640" height="480" fetchpriority="high">
+                <div class="comparison-before"><img id="comparison-before" src="assets/cases/classification-1/before.webp" alt="Abyssinian cat before restoration" width="640" height="480"></div>
+                <span class="image-label before-label">Degraded input</span><span class="image-label after-label">AgenticTDIR</span>
+                <div class="comparison-divider" aria-hidden="true"><span>‹ ›</span></div>
+                <input id="comparison-slider" type="range" min="0" max="100" value="50" aria-label="Before and after comparison" aria-valuetext="50 percent degraded input">
+              </div>
+              <p class="compare-hint"><span aria-hidden="true">↔</span> Drag to compare · use arrow keys when focused</p>
+            </div>
+            <aside class="case-info">
+              <span class="small-label" id="case-dataset">Oxford-IIIT Pet</span><h3 id="case-title">Abyssinian · sample 1</h3>
+              <p id="case-description">Compare the degraded and restored image. These examples illustrate how the restoration process changes visual evidence.</p>
+              <p class="case-result" id="case-result"></p>
+              <div class="case-picker"><label for="case-select">Explore another example</label><select id="case-select" aria-label="Select example"></select></div>
+            </aside>
+          </div>
+          <div class="showcase-footer"><span>Recorded examples · no inference runs in this page</span><a href="https://huggingface.co/spaces/CHICHIYU/AgenticTDIR" target="_blank" rel="noopener noreferrer">Open the interactive demo</a></div>
+        </div>
+        <noscript><p>The before-and-after controls need JavaScript. You can also explore the <a href="https://huggingface.co/spaces/CHICHIYU/AgenticTDIR">interactive demo on Hugging Face</a>.</p></noscript>
+      </div>
+    </section>
+
+    <section class="section alternate" id="overview" aria-labelledby="overview-title">
+      <div class="container">
+        <div class="intro-grid"><div><p class="eyebrow">02 / THE IDEA</p><h2 id="overview-title">Better looking.<br><span class="muted">But better for the task?</span></h2><p class="intro-callout">Visual quality and task performance<br>do not always improve together.</p></div>
+          <div class="abstract"><p>Images in the real world can contain blur, noise, haze, rain, low light, and compression artifacts at the same time. Their types, severities, and composition orders may be unknown to the deployed vision system.</p><p><strong>AgenticTDIR turns restoration into a sequential decision process.</strong> A lightweight policy proposes specialized restoration experts. A reference-free task-utility estimator checks each tentative transition on a frozen downstream model. An adaptive controller accepts, rejects, rolls back, or stops.</p><p>Evaluated on classification, object detection, and semantic segmentation across eight benchmarks, the framework generalizes to unseen degradation compositions and unseen datasets without test-time fine-tuning.</p></div>
+        </div>
+        <div class="highlights"><article><span class="feature-index">01</span><h3>Restore task evidence</h3><p>Guide restoration with the downstream model’s estimated task utility.</p></article><article><span class="feature-index">02</span><h3>Verify before committing</h3><p>Assess each candidate transition and roll back rejected actions.</p></article><article><span class="feature-index">03</span><h3>Run locally</h3><p>An 11M-parameter ResNet-18 policy with no external LLM or VLM API calls.</p></article></div>
+      </div>
+    </section>
+
+    <section class="section" id="method" aria-labelledby="method-title">
+      <div class="container">
+        <div class="section-heading"><div><p class="eyebrow">03 / HOW IT WORKS</p><h2 id="method-title">Propose. Verify. Refine.</h2></div><p>A closed loop around a frozen task model.<br>Every restoration action is a decision.</p></div>
+        <figure class="paper-figure"><button class="zoom-figure" data-zoom="assets/figures/framework.webp" data-caption="AgenticTDIR framework" aria-label="Enlarge framework figure"><img src="assets/figures/framework.webp" width="2400" height="980" alt="AgenticTDIR framework: encode the degradation state, rank restoration experts, verify reference-free utility, and accept, reject, or terminate." loading="lazy"><span class="zoom-tag">View full figure</span></button><figcaption><strong>The AgenticTDIR framework.</strong> A perception–proposal–verification–control loop adaptively composes restoration experts for the downstream task.</figcaption></figure>
+        <ol class="method-steps"><li><span>01</span><h3>Perceive</h3><p>Encode the current degradation state using downsampled RGB and DWT sub-bands.</p></li><li><span>02</span><h3>Propose</h3><p>A lightweight policy ranks candidate restoration experts for the current state.</p></li><li><span>03</span><h3>Verify</h3><p>Estimate each action’s task-utility gain without ground-truth task labels.</p></li><li><span>04</span><h3>Control</h3><p>Accept or roll back using an adaptive threshold. Stop when all candidates fail, or the step budget is reached.</p></li></ol>
+      </div>
+    </section>
+
+    <section class="section alternate" id="results" aria-labelledby="results-title">
+      <div class="container">
+        <div class="section-heading"><div><p class="eyebrow">04 / EXPERIMENTS</p><h2 id="results-title">See what the experiments reveal.</h2></div><p>From benchmark comparisons to real scenes.<br>Each experiment tests a different part of the idea.</p></div>
+
+        <article class="experiment-block" aria-labelledby="benchmark-title">
+          <div class="experiment-intro"><p class="small-label">UNSEEN COMPOSITE DEGRADATIONS</p><h3 id="benchmark-title">Recovering evidence across vision tasks.</h3><p>These comparisons test whether restoration recovers the evidence needed for classification, detection, and segmentation under unseen degradation compositions. The restored images and task predictions show how AgenticTDIR preserves discriminative details across different datasets, with the downstream models kept frozen.</p></div>
+          <figure class="paper-figure"><button class="zoom-figure" data-zoom="assets/figures/qualitative.webp" data-caption="Qualitative comparisons across three tasks" aria-label="Enlarge qualitative comparison figure"><img src="assets/figures/qualitative.webp" width="2600" height="689" loading="lazy" alt="Restored images, class predictions, object detections, and semantic segmentation maps compared across restoration methods"><span class="zoom-tag">View full figure</span></button><figcaption>Classification, object detection, and semantic segmentation under unseen composite degradations.</figcaption></figure>
+        </article>
+
+        <article class="experiment-block" id="real-world" aria-labelledby="real-world-title">
+          <div class="experiment-intro"><p class="small-label">REAL-WORLD GENERALIZATION</p><h3 id="real-world-title">Beyond controlled degradations.</h3><p>These case studies test whether the agent can handle real images with unknown degradations. Fog, snow, and raindrops probe conditions without matched specialists in the expert library; the nighttime scene tests whether composing several experts can recover detection evidence in practice.</p></div>
+          <div class="real-grid">
+            <figure class="paper-figure"><button class="zoom-figure" data-zoom="assets/figures/realworld.webp" data-caption="Real-world fog, snow, and raindrop examples" aria-label="Enlarge real-world degradation examples"><img src="assets/figures/realworld.webp" alt="Real-world results under fog, snow and raindrops, including predicted classes, detections and segmentation maps" width="1800" height="1772" loading="lazy"><span class="zoom-tag">View full figure</span></button><figcaption><strong>Beyond the expert library.</strong> Correct aircraft recognition under fog, more complete vehicle detections under snow, and more coherent segmentation under raindrops.</figcaption></figure>
+            <figure class="paper-figure"><button class="zoom-figure" data-zoom="assets/figures/nighttime.webp" data-caption="Nighttime restoration and detection" aria-label="Enlarge nighttime detection example"><img src="assets/figures/nighttime.webp" width="1800" height="1025" loading="lazy" alt="Nighttime film frame before and after restoration, with YOLOv8 vehicle detections"><span class="zoom-tag">View full figure</span></button><figcaption><strong>Recovering a distant vehicle at night.</strong> Low-light enhancement, denoising, and defocus deblurring strengthen existing detections and recover an additional vehicle. Frame from <em>The Bourne Supremacy</em>.</figcaption></figure>
+          </div>
+        </article>
+
+        <article class="experiment-block experiment-study" aria-labelledby="evidence-title">
+          <div class="study-copy"><p class="small-label">VISUAL QUALITY VS. TASK PERFORMANCE</p><h3 id="evidence-title">The details that change a prediction.</h3><p>This bird classification case tests whether better image quality also means better recognition. AgenticTDIR recovers the discriminative eye detail and the correct class, despite slightly worse PSNR and LPIPS than AgenticIR. The evidence maps illustrate why task-relevant details matter.</p></div>
+          <figure class="paper-figure study-figure"><button class="zoom-figure" data-zoom="assets/figures/task-evidence.webp" data-caption="Visual quality and task-discriminative evidence" aria-label="Enlarge task evidence experiment"><img src="assets/figures/task-evidence.webp" width="2200" height="1630" loading="lazy" alt="Brewer Blackbird restorations, classification predictions, discriminative eye details, and class evidence maps comparing AgenticIR with AgenticTDIR"><span class="zoom-tag">View full figure</span></button><figcaption>CUB-200-2011 case study with a frozen ResNet-50 classifier.</figcaption></figure>
+        </article>
+
+        <article class="experiment-block experiment-study" aria-labelledby="transfer-title">
+          <div class="study-copy"><p class="small-label">POLICY TRANSFER</p><h3 id="transfer-title">A policy that works beyond its training model.</h3><p>This experiment pairs policies and task models across ResNet-50, ViT-B/16, and ConvNeXt-B to test robustness to a different downstream backbone. Every tested pairing improves on degraded inputs. Matched pairs deliver larger gains overall, while mismatched pairs retain useful improvements.</p></div>
+          <figure class="paper-figure study-figure"><button class="zoom-figure" data-zoom="assets/figures/policy-transfer.webp" data-caption="Policy transfer across downstream model backbones" aria-label="Enlarge policy transfer experiment"><img src="assets/figures/policy-transfer.webp" width="2200" height="1274" loading="lazy" alt="Classification accuracy and normalized improvement for matched and mismatched policies across ResNet-50, ViT-B/16, and ConvNeXt-B"><span class="zoom-tag">View full figure</span></button><figcaption>Averaged over four classification datasets and four degradation compositions.</figcaption></figure>
+        </article>
+
+        <article class="experiment-block experiment-study" aria-labelledby="ablation-title">
+          <div class="study-copy"><p class="small-label">COMPONENT ABLATION</p><h3 id="ablation-title">Why proposal, verification, and control work together.</h3><p>These ablations test what happens when the decision loop is simplified. Removing multiple proposals, adaptive thresholds, or warm-up reduces performance; directly executing the top-ranked action causes the largest average drop. The results support checking and controlling each restoration decision.</p></div>
+          <figure class="paper-figure study-figure"><button class="zoom-figure" data-zoom="assets/figures/ablation.webp" data-caption="Ablation of proposal, verification, and control" aria-label="Enlarge component ablation experiment"><img src="assets/figures/ablation.webp" width="1800" height="1362" loading="lazy" alt="Dataset-level performance drop heatmap and task-level bar chart for simplified AgenticTDIR decision loops"><span class="zoom-tag">View full figure</span></button><figcaption>Performance drops relative to the complete AgenticTDIR framework.</figcaption></figure>
+        </article>
+      </div>
+    </section>
+
+    <section class="section alternate" id="video" aria-labelledby="video-title">
+      <div class="container"><div class="section-heading"><div><p class="eyebrow">05 / WATCH IT IN ACTION</p><h2 id="video-title">The story in two minutes.</h2></div><div class="segmented" role="group" aria-label="Video language"><button data-language="english" aria-pressed="true">English</button><button data-language="chinese" aria-pressed="false">Chinese</button></div></div>
+        <div class="video-frame"><video id="demo-video" controls playsinline preload="none" poster="assets/videos/poster.jpg" aria-label="AgenticTDIR English demonstration video"><source src="assets/videos/english.mp4" type="video/mp4"><p>Your browser does not support embedded video. <a href="assets/videos/english.mp4">Download the English video</a>.</p></video></div>
+        <div class="video-caption"><span>AgenticTDIR demonstration · approximately 2:10</span><a id="video-external" href="https://github.com/user-attachments/assets/45dde995-e7be-4d9a-8a0e-a886a2a00c2d" target="_blank" rel="noopener noreferrer">Watch on GitHub</a></div>
+      </div>
+    </section>
+
+    <section class="closing-section"><div class="container closing"><div><p class="eyebrow">EXPLORE AGENTICTDIR</p><h2>Try the restoration process.</h2><p>Explore the interactive demo on Hugging Face.<br>Follow the repository for source-code release updates.</p></div><div class="closing-actions"><a class="button primary" href="https://huggingface.co/spaces/CHICHIYU/AgenticTDIR" target="_blank" rel="noopener noreferrer">Open interactive demo</a><a class="button" href="https://github.com/ccyniubi/AgenticTDIR" target="_blank" rel="noopener noreferrer">Visit GitHub repository</a></div></div></section>
+  </main>
+  <footer class="footer"><div class="container footer-inner"><a class="brand" href="#top">Agentic<span>TDIR</span></a><p>Manuscript under review · Code release upon acceptance.</p><a href="#top">Back to top</a></div></footer>
+  <dialog class="figure-dialog" aria-labelledby="figure-title"><div class="dialog-bar"><h2 id="figure-title">Figure</h2><button id="close-figure" class="button small" aria-label="Close enlarged figure">Close</button></div><div class="dialog-image"><img id="enlarged-image" alt=""></div><p>Scroll to inspect the figure. Press Escape to close.</p></dialog>
+</body>
+</html>
