@@ -34,7 +34,7 @@
         </div>
         <div class="affiliations"><span><sup>1</sup> Xidian University</span><span><sup>2</sup> City University of Hong Kong</span><span><sup>3</sup> The Hong Kong Polytechnic University</span></div>
         <p class="corresponding">† Corresponding author</p>
-        <p class="hero-lead">Restore for the task. <strong>Verify every decision.</strong><br>Adaptive image restoration that recovers the evidence a frozen vision model needs.</p>
+        <p class="hero-lead">Restore for the task. <strong>Verify every decision.</strong><br>Adaptive image restoration that recovers the information a frozen vision model needs.</p>
         <div class="button-row">
           <a class="button primary" href="https://huggingface.co/spaces/CHICHIYU/AgenticTDIR" target="_blank" rel="noopener noreferrer"><span aria-hidden="true">◈</span> Try interactive demo</a>
           <a class="button" href="https://github.com/ccyniubi/AgenticTDIR" target="_blank" rel="noopener noreferrer"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 .8a11.2 11.2 0 0 0-3.54 21.83c.56.1.77-.24.77-.54v-2.08c-3.13.68-3.79-1.33-3.79-1.33-.51-1.3-1.25-1.65-1.25-1.65-1.02-.7.08-.69.08-.69 1.13.08 1.72 1.16 1.72 1.16 1 1.71 2.63 1.22 3.27.93.1-.72.39-1.22.72-1.5-2.5-.29-5.13-1.25-5.13-5.57 0-1.23.44-2.24 1.16-3.03-.12-.29-.51-1.43.11-2.98 0 0 .95-.3 3.08 1.16A10.7 10.7 0 0 1 12 6.13c.96 0 1.91.13 2.8.38 2.14-1.46 3.08-1.16 3.08-1.16.62 1.55.23 2.69.11 2.98.73.79 1.16 1.8 1.16 3.03 0 4.33-2.63 5.28-5.14 5.56.4.35.76 1.03.76 2.08v3.09c0 .3.2.65.78.54A11.2 11.2 0 0 0 12 .8Z"/></svg> GitHub</a>
@@ -48,7 +48,7 @@
 
     <section class="section examples-section" id="examples" aria-labelledby="examples-title">
       <div class="container">
-        <div class="section-heading"><div><p class="eyebrow">01 / SEE THE DIFFERENCE</p><h2 id="examples-title">Recover the evidence.</h2></div><p>Explore restoration across three vision tasks.<br>Drag the divider to compare input and output.</p></div>
+        <div class="section-heading"><div><p class="eyebrow">01 / SEE THE DIFFERENCE</p><h2 id="examples-title">Recover the information.</h2></div><p>Explore restoration across three vision tasks.<br>Drag the divider to compare input and output.</p></div>
         <div class="showcase">
           <div class="showcase-toolbar">
             <div class="segmented" role="tablist" aria-label="Example task">
@@ -71,12 +71,12 @@
             </div>
             <aside class="case-info">
               <span class="small-label" id="case-dataset">Oxford-IIIT Pet</span><h3 id="case-title">Abyssinian · sample 1</h3>
-              <p id="case-description">Compare the degraded and restored image. These examples illustrate how the restoration process changes visual evidence.</p>
+              <p id="case-description">Compare the degraded and restored image. These examples illustrate how the restoration process changes visual information.</p>
               <p class="case-result" id="case-result"></p>
               <div class="case-picker"><label for="case-select">Explore another example</label><select id="case-select" aria-label="Select example"></select></div>
             </aside>
           </div>
-          <div class="showcase-footer"><span>Recorded examples · no inference runs in this page</span><a href="https://huggingface.co/spaces/CHICHIYU/AgenticTDIR" target="_blank" rel="noopener noreferrer">Open the interactive demo</a></div>
+          <div class="showcase-footer"><a href="https://huggingface.co/spaces/CHICHIYU/AgenticTDIR" target="_blank" rel="noopener noreferrer">Open the interactive demo</a></div>
         </div>
         <noscript><p>The before-and-after controls need JavaScript. You can also explore the <a href="https://huggingface.co/spaces/CHICHIYU/AgenticTDIR">interactive demo on Hugging Face</a>.</p></noscript>
       </div>
@@ -85,9 +85,9 @@
     <section class="section alternate" id="overview" aria-labelledby="overview-title">
       <div class="container">
         <div class="intro-grid"><div><p class="eyebrow">02 / THE IDEA</p><h2 id="overview-title">Better looking.<br><span class="muted">But better for the task?</span></h2><p class="intro-callout">Visual quality and task performance<br>do not always improve together.</p></div>
-          <div class="abstract"><p>Images in the real world can contain blur, noise, haze, rain, low light, and compression artifacts at the same time. Their types, severities, and composition orders may be unknown to the deployed vision system.</p><p><strong>AgenticTDIR turns restoration into a sequential decision process.</strong> A lightweight policy proposes specialized restoration experts. A reference-free task-utility estimator checks each tentative transition on a frozen downstream model. An adaptive controller accepts, rejects, rolls back, or stops.</p><p>Evaluated on classification, object detection, and semantic segmentation across eight benchmarks, the framework generalizes to unseen degradation compositions and unseen datasets without test-time fine-tuning.</p></div>
+          <div class="abstract"><p>Images in the real world can contain blur, noise, haze, rain, low light, and compression artifacts at the same time. Their types, severities, and composition orders may be unknown to the deployed vision system.</p><p><strong>AgenticTDIR turns restoration into a sequential decision process.</strong> A lightweight policy proposes specialized restoration experts. A reference-free task-utility estimator checks each tentative transition on a frozen downstream model. An adaptive controller accepts, rejects, rolls back, or terminates.</p><p>Evaluated on classification, object detection, and semantic segmentation across eight benchmarks, the framework generalizes to unseen degradation compositions and unseen datasets without test-time fine-tuning.</p></div>
         </div>
-        <div class="highlights"><article><span class="feature-index">01</span><h3>Restore task evidence</h3><p>Guide restoration with the downstream model’s estimated task utility.</p></article><article><span class="feature-index">02</span><h3>Verify before committing</h3><p>Assess each candidate transition and roll back rejected actions.</p></article><article><span class="feature-index">03</span><h3>Run locally</h3><p>An 11M-parameter ResNet-18 policy with no external LLM or VLM API calls.</p></article></div>
+        <div class="highlights"><article><span class="feature-index">01</span><h3>Restore task information</h3><p>Guide restoration with the downstream model’s estimated task utility.</p></article><article><span class="feature-index">02</span><h3>Verify before committing</h3><p>Assess each candidate transition and roll back rejected actions.</p></article><article><span class="feature-index">03</span><h3>Run locally</h3><p>An 11M-parameter policy with no external LLM or VLM API calls.</p></article></div>
       </div>
     </section>
 
@@ -104,12 +104,12 @@
         <div class="section-heading"><div><p class="eyebrow">04 / EXPERIMENTS</p><h2 id="results-title">See what the experiments reveal.</h2></div><p>From benchmark comparisons to real scenes.<br>Each experiment tests a different part of the idea.</p></div>
 
         <article class="experiment-block" aria-labelledby="benchmark-title">
-          <div class="experiment-intro"><p class="small-label">UNSEEN COMPOSITE DEGRADATIONS</p><h3 id="benchmark-title">Recovering evidence across vision tasks.</h3><p>These comparisons test whether restoration recovers the evidence needed for classification, detection, and segmentation under unseen degradation compositions. The restored images and task predictions show how AgenticTDIR preserves discriminative details across different datasets, with the downstream models kept frozen.</p></div>
+          <div class="experiment-intro"><p class="small-label">UNSEEN COMPOSITE DEGRADATIONS</p><h3 id="benchmark-title">Recovering information across vision tasks.</h3><p>These comparisons test whether restoration recovers the information needed for classification, detection, and segmentation under unseen degradation compositions. The restored images and task predictions show how AgenticTDIR preserves discriminative details across different datasets, with the downstream models kept frozen.</p></div>
           <figure class="paper-figure"><button class="zoom-figure" data-zoom="assets/figures/qualitative.webp" data-caption="Qualitative comparisons across three tasks" aria-label="Enlarge qualitative comparison figure"><img src="assets/figures/qualitative.webp" width="2600" height="689" loading="lazy" alt="Restored images, class predictions, object detections, and semantic segmentation maps compared across restoration methods"><span class="zoom-tag">View full figure</span></button><figcaption>Classification, object detection, and semantic segmentation under unseen composite degradations.</figcaption></figure>
         </article>
 
         <article class="experiment-block" id="real-world" aria-labelledby="real-world-title">
-          <div class="experiment-intro"><p class="small-label">REAL-WORLD GENERALIZATION</p><h3 id="real-world-title">Beyond controlled degradations.</h3><p>These case studies test whether the agent can handle real images with unknown degradations. Fog, snow, and raindrops probe conditions without matched specialists in the expert library; the nighttime scene tests whether composing several experts can recover detection evidence in practice.</p></div>
+          <div class="experiment-intro"><p class="small-label">REAL-WORLD GENERALIZATION</p><h3 id="real-world-title">Beyond controlled degradations.</h3><p>These case studies test whether the agent can handle real images with unknown degradations. Fog, snow, and raindrops probe conditions without matched specialists in the expert library; the nighttime scene tests whether composing several experts can recover information for detection in practice.</p></div>
           <div class="real-grid">
             <figure class="paper-figure"><button class="zoom-figure" data-zoom="assets/figures/realworld.webp" data-caption="Real-world fog, snow, and raindrop examples" aria-label="Enlarge real-world degradation examples"><img src="assets/figures/realworld.webp" alt="Real-world results under fog, snow and raindrops, including predicted classes, detections and segmentation maps" width="1800" height="1772" loading="lazy"><span class="zoom-tag">View full figure</span></button><figcaption><strong>Beyond the expert library.</strong> Correct aircraft recognition under fog, more complete vehicle detections under snow, and more coherent segmentation under raindrops.</figcaption></figure>
             <figure class="paper-figure"><button class="zoom-figure" data-zoom="assets/figures/nighttime.webp" data-caption="Nighttime restoration and detection" aria-label="Enlarge nighttime detection example"><img src="assets/figures/nighttime.webp" width="1800" height="1025" loading="lazy" alt="Nighttime film frame before and after restoration, with YOLOv8 vehicle detections"><span class="zoom-tag">View full figure</span></button><figcaption><strong>Recovering a distant vehicle at night.</strong> Low-light enhancement, denoising, and defocus deblurring strengthen existing detections and recover an additional vehicle. Frame from <em>The Bourne Supremacy</em>.</figcaption></figure>
@@ -117,8 +117,8 @@
         </article>
 
         <article class="experiment-block experiment-study" aria-labelledby="evidence-title">
-          <div class="study-copy"><p class="small-label">VISUAL QUALITY VS. TASK PERFORMANCE</p><h3 id="evidence-title">The details that change a prediction.</h3><p>This bird classification case tests whether better image quality also means better recognition. AgenticTDIR recovers the discriminative eye detail and the correct class, despite slightly worse PSNR and LPIPS than AgenticIR. The evidence maps illustrate why task-relevant details matter.</p></div>
-          <figure class="paper-figure study-figure"><button class="zoom-figure" data-zoom="assets/figures/task-evidence.webp" data-caption="Visual quality and task-discriminative evidence" aria-label="Enlarge task evidence experiment"><img src="assets/figures/task-evidence.webp" width="2200" height="1630" loading="lazy" alt="Brewer Blackbird restorations, classification predictions, discriminative eye details, and class evidence maps comparing AgenticIR with AgenticTDIR"><span class="zoom-tag">View full figure</span></button><figcaption>CUB-200-2011 case study with a frozen ResNet-50 classifier.</figcaption></figure>
+          <div class="study-copy"><p class="small-label">VISUAL QUALITY VS. TASK PERFORMANCE</p><h3 id="evidence-title">The details that change a prediction.</h3><p>This bird classification case tests whether better image quality also means better recognition. AgenticTDIR recovers the discriminative eye detail and the correct class, despite slightly worse PSNR and LPIPS than AgenticIR. The class activation maps illustrate why task-relevant details matter.</p></div>
+          <figure class="paper-figure study-figure"><button class="zoom-figure" data-zoom="assets/figures/task-evidence.webp" data-caption="Visual quality and task-discriminative information" aria-label="Enlarge task information experiment"><img src="assets/figures/task-evidence.webp" width="2200" height="1630" loading="lazy" alt="Brewer Blackbird restorations, classification predictions, discriminative eye details, and class activation maps comparing AgenticIR with AgenticTDIR"><span class="zoom-tag">View full figure</span></button><figcaption>CUB-200-2011 case study with a frozen ResNet-50 classifier.</figcaption></figure>
         </article>
 
         <article class="experiment-block experiment-study" aria-labelledby="transfer-title">

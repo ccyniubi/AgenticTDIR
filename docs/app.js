@@ -5,7 +5,7 @@
   const $$ = (selector) => [...document.querySelectorAll(selector)];
   let task = 'classification', caseIndex = 0, view = 'prediction';
   const descriptions = {
-    classification:'Compare the degraded and restored image. These examples illustrate how the restoration process changes visual evidence.',
+    classification:'Compare the degraded and restored image. These examples illustrate how the restoration process changes visual information.',
     detection:'Inspect the restored image and the frozen model’s predicted bounding boxes.',
     segmentation:'Switch between the restored scene and its predicted semantic segmentation map.'
   };
