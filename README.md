@@ -8,9 +8,14 @@
   <a href="https://huggingface.co/spaces/CHICHIYU/AgenticTDIR">
     <img src="https://img.shields.io/badge/🤗%20Hugging%20Face-Interactive%20Demo-yellow" alt="Hugging Face Demo">
   </a>
-  <img src="https://img.shields.io/badge/Status-Under%20Review-blue" alt="Status: Under Review">
+  <a href="https://ccyniubi.github.io/AgenticTDIR/">
+    <img src="https://img.shields.io/badge/Project-Page-6cdeef" alt="Project Page">
+  </a>
   <img src="https://visitor-badge.laobi.icu/badge?page_id=CHICHIYU.AgenticTDIR&left_text=Visitors" alt="Page Visitors">
 </p>
+
+<h2 align="center">🌐 <a href="https://ccyniubi.github.io/AgenticTDIR/">Explore the AgenticTDIR Project Page</a></h2>
+<p align="center">Visual comparisons, real-world results, experiments, and demo videos.</p>
 
 **AgenticTDIR** is an agentic framework for **Task-Driven Image Restoration (TDIR)** under unknown composite degradations.
 
