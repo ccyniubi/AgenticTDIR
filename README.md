@@ -14,6 +14,9 @@
   <img src="https://visitor-badge.laobi.icu/badge?page_id=CHICHIYU.AgenticTDIR&left_text=Visitors" alt="Page Visitors">
 </p>
 
+> [!IMPORTANT]
+> **Code release notice:** The paper is currently **under review**, so the code is **not yet available**. We are committed to publicly releasing the **source code, pretrained models, and complete reproduction instructions** once the review process is complete.
+
 <h2 align="center">🌐 <a href="https://ccyniubi.github.io/AgenticTDIR/">Explore the AgenticTDIR Project Page</a></h2>
 <p align="center">Visual comparisons, real-world results, experiments, and demo videos.</p>
 
